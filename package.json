@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --respawn --clear src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js",
+    "netlify:dev": "netlify dev"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.8.1",
+    "netlify-cli": "^17.36.2"
+  }
+}
